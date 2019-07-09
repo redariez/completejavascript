@@ -196,7 +196,7 @@ if (age < 13) {
 * The Ternary Operator and Switch statements
 */
 //Ternary Operator
-var firstName = 'John';
+var firstName = 'Ade';
 var age = 22;
 
 age >= 18 ? console.log(firstName + ' does pushups.')
@@ -215,14 +215,45 @@ console.log(workout);
 var job = 'driver';
 switch(job) {
   case 'teacher':
-  console.log( firstName + ' teaches kids how to code.');
+  console.log(firstName + ' teaches kids how to code.');
   break;
   case 'driver':
-  console.log( firstName + ' drives an Uber in Berkeley.');
+  console.log(firstName + ' drives an Uber in Berkeley.');
   break;
   case 'designer':
-  console.log( firstName + ' designs beautiful websites.');
+  console.log(firstName + ' designs beautiful websites.');
   break;
   default: console.log(firstName + ' goes to sleep.');
 
+}
+
+age = 20;
+switch (true) {
+  case age < 13:
+    console.log(firstName + ' is a boy.');
+    break;
+  case age >= 13 && age < 20:
+    console.log(firstName + ' is a teenager.');
+    break;
+  case age >= 20 && age < 30:
+    console.log(firstName + ' is a young man.');
+    break;
+  default:
+    console.log(firstName + ' is a man.');
+}
+
+
+/**********
+* Truthy and Falsy values and equality operators
+*/
+
+// falsy values: undefines, null, 0, '', naming// truthy values: NOT falsy values
+
+var height;
+
+height = 23;
+if (height) {
+  console.log('Variable is defined');
+} else {
+  console.log('Variable has NOT been defined');
 }
