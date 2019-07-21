@@ -257,3 +257,32 @@ if (height) {
 } else {
   console.log('Variable has NOT been defined');
 }
+
+// coding challenge 3
+
+var scoreJohn = (129 + 120 + 103 ) / 3;
+var scoreMike = (116 + 94 + 123) / 3;
+var scoreMary = (97+ 134 + 105) / 3;
+console.log(scoreJohn, scoreMike);
+
+if (scoreJohn > scoreMike) {
+  console.log('Johns\s team wins with ' + scoreJohn + ' points');
+} else if (scoreMike > scoreJohn) {
+  console.log('Mike\s team wins with ' + scoreMike + ' points');
+} else {
+  console.log('There is a draw');
+}
+
+
+/***********
+* Functions
+*/
+
+function calculateAge(birthYear) {
+  return 2018 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane);
