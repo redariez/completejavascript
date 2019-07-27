@@ -196,6 +196,8 @@ if (age < 13) {
 * The Ternary Operator and Switch statements
 */
 //Ternary Operator
+
+/*
 var firstName = 'Ade';
 var age = 22;
 
@@ -205,12 +207,14 @@ age >= 18 ? console.log(firstName + ' does pushups.')
 var workout = age >= 18 ? 'pullups' : 'pushups';
 console.log(workout);
 
-/*if (age >= 18) {
+if (age >= 18) {
   var workout = 'pullups';
 } else {
   var workout = 'pushups';
-}*/
+}
+*/
 
+/*
 // Switch statements
 var job = 'driver';
 switch(job) {
@@ -249,6 +253,7 @@ switch (true) {
 
 // falsy values: undefines, null, 0, '', naming// truthy values: NOT falsy values
 
+/*
 var height;
 
 height = 23;
@@ -257,9 +262,10 @@ if (height) {
 } else {
   console.log('Variable has NOT been defined');
 }
+*/
 
 // coding challenge 3
-
+/*
 var scoreJohn = (129 + 120 + 103 ) / 3;
 var scoreMike = (116 + 94 + 123) / 3;
 var scoreMary = (97+ 134 + 105) / 3;
@@ -272,12 +278,12 @@ if (scoreJohn > scoreMike) {
 } else {
   console.log('There is a draw');
 }
-
+*/
 
 /***********
 * Functions
 */
-
+/*
 function calculateAge(birthYear) {
   return 2018 - birthYear;
 }
@@ -286,3 +292,71 @@ var ageJohn = calculateAge(1990);
 var ageMike = calculateAge(1948);
 var ageJane = calculateAge(1969);
 console.log(ageJohn, ageMike, ageJane);
+
+function yearsUutilRetriement(year, firstName) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+
+  if(retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years.');
+  } else {
+    console.log(firstName + ' is already retired.')
+  }
+}
+
+yearsUutilRetriement(1990, 'John');
+yearsUutilRetriement(1948, 'Mike');
+yearsUutilRetriement(1969, 'Jane');
+*/
+
+
+/*****************************
+* Functions Statements and Expressions
+*/
+// Function declaration
+// function whatDoYouDo(job, firstName) {
+
+
+// Function Expression
+var whatDoYouDo = function(job, firstName) {
+    switch(job) {
+      case 'teacher':
+          return firstName + ' teaches kids how to code';
+      case 'driver':
+          return firstName + ' drives a cab in Berkeley';
+      case 'designer':
+          return firstName + ' designs beautiful websites';
+      default:
+          return firstName + ' does something else';
+    }
+}
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Ade'));
+console.log(whatDoYouDo('retired', 'John'));
+
+/*************
+* Arrays
+*/
+
+//initialize new Array
+var names = ['john', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names);
+console.log(names.length);
+
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+//Different data types
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('blue');
+john.unshift('Mr.');
+console.log(john);
+
+john.pop();
+console.log(john);
