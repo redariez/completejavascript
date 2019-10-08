@@ -411,7 +411,51 @@ var john = {
       this.age = 2018 - this.birthYear;
   }
 };
-
 john.calcAge();
-
 console.log(john);
+
+/*coding challenge 4
+*/
+
+var john = {
+  fullName: 'JOhn Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function() {
+  this.bmi =  this.mass / (this.height * this.height);
+  }
+};
+
+/**********************************
+* Loops and iteration
+*/
+
+// for loop
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 < 10 true, log i to the console, i++
+//...
+// i = 9, 9 < 10 true, log i to the console, i++
+// i = 10, 9 < 10 true FALSE,  exit the loop!
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+for (var i = 0; i < john.length; i++) {
+  console.log(john[i]);
+}
+
+// while loop
+var i = 0;
+while(i < john.length) {
+  console.log(john[i]);
+  i++;
+}
+
+// continue and break Statements
+var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') continue;
+  console.log(john[i]);
+}
